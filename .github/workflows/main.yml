@@ -11,7 +11,8 @@ jobs:
         uses: actions/checkout@v2
       - name: compile js
         run: |-
-          npm i
+          npm i -g @vercel/ncc
+          npm ci --prefer-offline
           ncc build index.js --license licenses.txt
       - name: Hello world action step
         uses: danBamikiya/hello-world-javascript-action@main # Uses an action in the root directory
