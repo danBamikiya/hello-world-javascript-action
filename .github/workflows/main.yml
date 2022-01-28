@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello world action step
-        uses: danBamikiya/hello-world-javascript-action@v1.2 # Uses an action in the root directory
+        uses: danBamikiya/hello-world-javascript-action@v1.3 # Uses an action in the root directory
         id: hello
         with:
           who-to-greet: "Dannyawesome"
