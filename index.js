@@ -5,7 +5,7 @@ try {
   // `who-to-greet` input defined in action metadat file
   const nameToGreet = core.getInput("who-to-greet");
   console.log(`Hello ${nameToGreet}`);
-  const time = new Date().toTimeString();
+  const time = (new Date()).toTimeString();
   console.log(`The time is ${time}`);
   core.setOutput("time", time);
   // Get the JSON webhook payload for the event that triggered the workflow
