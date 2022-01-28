@@ -9,6 +9,10 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
+      - name: compile js
+        run: |-
+          npm i
+          ncc build index.js --license licenses.txt
       - name: Hello world action step
         uses: danBamikiya/hello-world-javascript-action@main # Uses an action in the root directory
         id: hello
